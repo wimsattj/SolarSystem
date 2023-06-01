@@ -6,6 +6,15 @@ import { data } from "../data/data";
 
 export function getAsteroidNames(data) {
   // Your code goes here...
+    let astroidNames = []; 
+    let names = data.asteroids.filter(function(n,i){
+      if (data.asteroids[i].name) {
+        astroidNames.push(data.asteroids[i].name);
+      } 
+    });
+    return (astroidNames);
+
+
 }
 
 

@@ -6,7 +6,17 @@ import { data } from "../data/data";
 
 export function getEarthData(data) {
   // Your code goes here...
+	let finalObj = {};
+  let earth = data.planets.filter(function (name, i)
+  {
+    if (data.planets[i].id === 'earth'){
+			Object.assign(finalObj,data.planets[i]);
+      return data.planets[i].id === 'earth';
+    }
+  })
+		return finalObj;
 }
+
 
 
 

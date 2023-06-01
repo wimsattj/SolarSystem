@@ -6,6 +6,15 @@ import { data } from "../data/data";
 
 export function allPlanetsMoonsCount(data) {
   // Your code goes here...
+  let planetSum = 0;
+  let sum = data.planets.filter(function (sumOfMoons, i)
+  {
+    if (Number.isInteger(data.planets[i].moonsCount))
+    {
+      planetSum += data.planets[i].moonsCount;
+    }
+  })
+  return (planetSum);
 }
 
 
