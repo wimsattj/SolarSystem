@@ -11,9 +11,7 @@ export function lowMoonsPlanets(data) {
   let plan = data.planets.filter(function (name, i)
   {
     if (data.planets[i].moonsCount >= 10)
-    {
-      console.log(data.planets[i].name + ' has too many moons')
-    } else
+    {} else
     {
       lowMoons.push(data.planets[i].name);
     }

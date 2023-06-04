@@ -8,35 +8,28 @@ import { maxBy, minBy } from "./e17";
 
 export function getGreatestDiscoveryYear(data)
 {
-  let years = [];
+
   // Your code goes here...
   // feel free to import your `maxBy` or `minBy` methods from previous lessons
   function Year(year,count) {
     this.year = year;
     this.count = count;
   };
-  let minYear = minBy(data.asteroids, (rock) => rock.discoveryYear).discoveryYear;
-  let maxYear = maxBy(data.asteroids, (rock) => rock.discoveryYear).discoveryYear;
-  let endYears = maxYear - minYear;
   let count = 0;
-			 for (let loop = 0; loop < endYears; loop ++)
-				{ 
-					count = 0 ;
-					for (let j =0; j<data.asteroids.length; j++){
-						if (data.asteroids[j].discoveryYear == loop+minYear) {
-							count ++;
-						}
-						if (count >1) {
-						//console.log(years);
-					  years.push(new Year(loop+minYear,count))}
-					}
-				};
-    return (maxBy(years, (final) => final.count).year);
-
-
-
-
-
+  let years = [];
+  let nill = data.asteroids.filter(function(discovery){
+    count = 0;
+    var nill = data.asteroids.filter(function(name) {
+      if (name.discoveryYear == discovery.discoveryYear) {
+        count++;
+      }
+      return years;
+    }, 0);
+    if (count > 0) {
+        years.push(new Year(discovery.discoveryYear, count))
+      }
+  }, 0);
+  return (maxBy(years, (final) => final.count).year);
 }
 
  /*
