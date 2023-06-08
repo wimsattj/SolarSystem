@@ -7,13 +7,16 @@ import { data } from "../data/data";
 export function getAllAverageTemperatures(data) {
   // Your code goes here...
 
-   let planetTemps= []; 
+  return data.planets.map((planet) => planet.avgTemp);
+
+
+ /*  let planetTemps= []; 
     let temps= data.planets.filter(function(n,i){
       if (data.planets[i].avgTemp) {
         planetTemps.push(data.planets[i].avgTemp);
       } 
     });
-    return (planetTemps);
+    return (planetTemps);*/
 }
 
 

@@ -4,20 +4,12 @@ import { data } from "../data/data";
 // Return the data object of the planet "Earth"
 // Return example: { key1: value1, key2: value2, ... , keyN: valueN }
 
-export function getEarthData(data) {
-  // Your code goes here...
-	let finalObj = {};
-  let earth = data.planets.filter(function (name, i)
-  {
-    if (data.planets[i].id === 'earth'){
-			Object.assign(finalObj,data.planets[i]);
-      return data.planets[i].id === 'earth';
-    }
-  })
-		return finalObj;
+export function getEarthData(data)
+{
+  return data.planets
+    .filter((planet) => (planet.name === 'Earth'))
+    .map((planet) => planet)[0];
 }
-
-
 
 
 // === TEST YOURSELF ===

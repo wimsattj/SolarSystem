@@ -4,13 +4,18 @@
  * Return example: 1902
  */
 
-import { maxBy, minBy } from "./e17";
+import { maxBy } from "./e17";
 
 export function getGreatestDiscoveryYear(data)
 {
-
-  // Your code goes here...
-  // feel free to import your `maxBy` or `minBy` methods from previous lessons
+// ive been working on this last one too long. I'm struggling with the new concept of (nested simplified callback functions)
+// I think I've been doing fairly well, implementing concepts that I do not fully understand. I have a child's grasp on this, and unless I could have an interactive
+// conversation on the matter, I will be stuck at my current understanding for a while, I grow weary of trying to invent a new method
+// that I cannot find on the internet. this method works, and until I better understand call backs, and make this breakthrough that I need to understand putting these three concepts together, I am, for lack of a better word, stuck.
+// the only examples that I can find to count occurences return an an object that when converted to an array
+// is no longer accessable with the code as I know it, my attempts to convert it to accessable data result in far more complex code, which defeats
+// the purpose of simplification. Therefore, without further guidance, this is as simplified as I can achieve the result.
+  
   function Year(year,count) {
     this.year = year;
     this.count = count;

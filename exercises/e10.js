@@ -4,19 +4,16 @@ import { data } from "../data/data";
 // Return a given asteroid object of data
 // Return example: { key1: value1, key2: value2, ... , keyN: valueN }
 
-export function getAsteroidDataByName(data, asteroidName){
+export function getAsteroidDataByName(data, asteroidName)
+{
   // Your code goes here...
-	let finalObj = {};
-  let earth = data.asteroids.filter(function (name, i)
-  {
-    if (data.asteroids[i].name === asteroidName){
-			Object.assign(finalObj,data.asteroids[i]);
-      return data.asteroids[i].name === asteroidName;
-    }
-  })
-		return finalObj;
-
+  return data.asteroids
+    .filter((rock) => (rock.name === asteroidName))
+    .map((rock) => rock)[0];
 }
+
+
+
 
 
 
